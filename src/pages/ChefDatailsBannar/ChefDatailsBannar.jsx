@@ -7,8 +7,8 @@ import LazyLoad from 'react-lazy-load';
 const ChefDatailsBannar = ({ chefData }) => {
     console.log(chefData);
     return (
-       <LazyLoad>
-        <div className="hero md:h-[50vh] bg-base-200 my-10">
+       <LazyLoad height={400} >
+        <div className="hero md:h-[] bg-base-100 mt-20 mb-44">
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <img className='w-96' src={chefData && chefData.chefPicture} />
                 <div>

@@ -7,7 +7,7 @@ const ChefsData = ({ chefsData }) => {
     console.log(chefsData);
 
     return (
-        <div className='md:w-[75%] my-6 mx-auto'>
+        <div className='md:w-[75%] my-16 mx-auto'>
             <div className=' mb-12 text-center '>
                 <h1 className='text-4xl font-bold  my-5 '>Introduce Our Awasome Chef</h1>
                 <p className='w-[70%] mx-auto'>
