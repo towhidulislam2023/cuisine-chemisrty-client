@@ -5,14 +5,19 @@ import HomeBannar from '../../pages/HomeBannar/HomeBannar';
 import { useLoaderData } from 'react-router-dom';
 import ChefsData from '../../pages/chefsData/ChefsData';
 import LazyLoad from 'react-lazy-load';
+import FoodData from '../../pages/FoodData/FoodData';
+import Carusole from '../../pages/Carusole/Carusole';
 
 
 const Home = () => {
     const chefsData=useLoaderData()
     return (
         <div className=''>
-            <LazyLoad height={772}><HomeBannar></HomeBannar></LazyLoad> 
+            <HomeBannar></HomeBannar> 
             <ChefsData chefsData={chefsData}></ChefsData>
+            <FoodData></FoodData>
+            <Carusole></Carusole>
+
         </div>
     );
 };
