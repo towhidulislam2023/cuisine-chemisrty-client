@@ -7,8 +7,8 @@ const ChefsData = ({ chefsData }) => {
     console.log(chefsData);
 
     return (
-        <div className='md:w-[75%] my-16 mx-auto'>
-            <div className='mt-24 mb-12 text-center '>
+        <div className='md:w-[75%] my-6 mx-auto'>
+            <div className='mt-9 mb-12 text-center '>
                 <h1 className='text-4xl font-bold  my-5 '>Introduce Our Awasome Chef</h1>
                 <p className='w-[70%] mx-auto'>
                     Introducing our talented and passionate chef, who brings creativity and expertise to every dish. With years of experience and a commitment to using only the freshest ingredients, our chef creates unforgettable culinary experiences that delight the senses and leave a lasting impression.</p>

@@ -1,9 +1,16 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import React from 'react';
-
+import React, { useState } from 'react';
+import '@smastrom/react-rating/style.css'
+import { Rating } from '@smastrom/react-rating';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const DisplayRecipeData = ({ recipe }) => {
-    console.log(recipe);
+    const [disableButton,setDisableButton]=useState(false)
+    const handelFavoriteRecipe=()=>{
+        toast("You have added this recipe to Your favorites")
+        setDisableButton(true)
+    }
     return (
         <div className="card  bg-base-100 shadow-xl my-11">
             <div className="card-body">
@@ -17,10 +24,14 @@ const DisplayRecipeData = ({ recipe }) => {
                 <h1 className='text-2xl font-semi-bold'>Cooking method:</h1>
                 <p>{recipe.cookingMethod}</p>
                 <div className="card-actions justify-between items-center">
-                    {recipe.rating}
-                    <button className="btn btn-warning"> Favorite</button>
+                    <Rating
+                        style={{ maxWidth: 150 }}
+                        value={Math.round(recipe.rating)} readOnly />
+                    <span className='flex-grow'>{recipe.rating}</span>
+                    <button onClick={handelFavoriteRecipe} disabled={disableButton} className="btn btn-warning"> Favorite</button>
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
 };
