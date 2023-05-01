@@ -1,10 +1,12 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import { Outlet } from 'react-router-dom';
+import Header from '../../shearedPages/Header/Header';
 
 const PrimaryLayout = () => {
     return (
         <div>
-            <h1>This is primary Layout</h1>
+            <Header></Header>
             <Outlet></Outlet>
         </div>
     );

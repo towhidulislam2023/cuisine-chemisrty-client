@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.set-bg{
+  background-image: url(/src/assets/young-confident-caucasian-cook-girl-chef-uniform-stands-white-wall-holds-wall-isolated-orange-wall-with-copy-space.jpg);
+  height: 80vh;
+  background-size: cover;
+  background-position: top center;
+}
