@@ -6,6 +6,7 @@ import Home from "../components/Home/Home";
 import ChefDetails from "../Components/ChefDetails/ChefDetails";
 
 
+
 const router = createBrowserRouter([
     {
         path: "/",
@@ -13,7 +14,7 @@ const router = createBrowserRouter([
         children:[
             {
                 path:"/",
-                element:<Home></Home>,
+                element: <Home></Home>,
                 loader: () => fetch("https://cuisine-chemistry-server-towhidulislam2023.vercel.app/chefs")
             }
         ]
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
         children:[
             {
                 path: '/recipe/:id',
-                element:<ChefDetails></ChefDetails>
+                element: <ChefDetails></ChefDetails>
             }
         ]
     }

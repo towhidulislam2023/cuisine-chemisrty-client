@@ -1,12 +1,15 @@
 /* eslint-disable no-undef */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaThumbsUp } from 'react-icons/fa';
+import LazyLoad from 'react-lazy-load';
 import { Link } from 'react-router-dom';
+
 
 const DisplayChefsData = ({ chefdata }) => {
     return (
+        <LazyLoad height={762}>
         <div className="card md:w-[24rem] bg-base-100 shadow-xl">
             <figure><img className='' src={chefdata.chefPicture} alt="Shoes" /></figure>
             <div className="card-body">
@@ -20,9 +23,11 @@ const DisplayChefsData = ({ chefdata }) => {
                     <div className=""><FaThumbsUp className='text-blue-700 text-3xl'></FaThumbsUp></div>
                     <div className="badge badge-outline">{chefdata.likes}</div>
                 </div>
-                <Link to={`/recipe/${chefdata.chef_recipe_id}`}>  <button className='w-[100%] btn mt-5 btn-warning font-bold'>View Recipes</button></Link> 
+                <Link to={`/recipe/${chefdata.chef_recipe_id}`}>  <button
+                 
+                 className='w-[100%] btn mt-5 btn-warning font-bold'>View Recipes</button></Link> 
             </div>
-        </div>
+            </div></LazyLoad>
     );
 };
 
