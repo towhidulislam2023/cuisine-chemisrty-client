@@ -25,7 +25,8 @@ const router = createBrowserRouter([
         children:[
             {
                 path: '/recipe/:id',
-                element: <ChefDetails></ChefDetails>
+                element: <ChefDetails></ChefDetails>,
+                loader: ({params}) => fetch(`https://cuisine-chemistry-server-towhidulislam2023.vercel.app/recipe/${params.id}`)
             }
         ]
     }

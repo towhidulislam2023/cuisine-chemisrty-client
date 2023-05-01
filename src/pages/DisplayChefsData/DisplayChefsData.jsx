@@ -9,9 +9,9 @@ import { Link } from 'react-router-dom';
 
 const DisplayChefsData = ({ chefdata }) => {
     return (
-        <LazyLoad height={762}>
+       
         <div className="card md:w-[24rem] bg-base-100 shadow-xl">
-            <figure><img className='' src={chefdata.chefPicture} alt="Shoes" /></figure>
+            <figure><LazyLoad height={200}><img className='' src={chefdata.chefPicture} alt="" /></LazyLoad></figure>
             <div className="card-body">
                 <h2 className="card-title ">
                     {chefdata.chefName}
@@ -27,7 +27,7 @@ const DisplayChefsData = ({ chefdata }) => {
                  
                  className='w-[100%] btn mt-5 btn-warning font-bold'>View Recipes</button></Link> 
             </div>
-            </div></LazyLoad>
+            </div>
     );
 };
 

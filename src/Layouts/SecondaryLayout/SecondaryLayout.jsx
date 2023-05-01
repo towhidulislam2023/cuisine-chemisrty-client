@@ -7,7 +7,6 @@ const SecondaryLayout = () => {
     return (
         <div className=''>
             <Header></Header>
-            <h1>This is secondary Layout</h1>
             <Outlet></Outlet>
         </div>
     );
