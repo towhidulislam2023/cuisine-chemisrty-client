@@ -4,6 +4,9 @@ import PrimaryLayout from "../Layouts/PrimaryLayout/PrimaryLayout";
 import SecondaryLayout from "../Layouts/SecondaryLayout/SecondaryLayout";
 import Home from "../components/Home/Home";
 import ChefDetails from "../Components/ChefDetails/ChefDetails";
+import Errorpage from "../Components/ErrorPage/Errorpage";
+import Login from "../Layouts/LoginLayout/Login";
+import Registar from "../Layouts/RegistarLayout/Registar";
 
 
 
@@ -11,6 +14,7 @@ const router = createBrowserRouter([
     {
         path: "/",
         element:<PrimaryLayout></PrimaryLayout>,
+        errorElement:<Errorpage></Errorpage>,
         children:[
             {
                 path:"/",
@@ -22,6 +26,7 @@ const router = createBrowserRouter([
     {
         path:'/recipe',
         element:<SecondaryLayout></SecondaryLayout>,
+        errorElement: <Errorpage></Errorpage>,
         children:[
             {
                 path: '/recipe/:id',
@@ -29,6 +34,14 @@ const router = createBrowserRouter([
                 loader: ({params}) => fetch(`https://cuisine-chemistry-server-towhidulislam2023.vercel.app/recipe/${params.id}`)
             }
         ]
+    },
+    {
+        path:"/login",
+        element:<Login></Login>
+    },
+    {
+        path:"/registar",
+        element:<Registar></Registar>
     }
 ]);
 export default router

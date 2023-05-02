@@ -1,11 +1,12 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { FaArrowAltCircleRight } from 'react-icons/fa';
+import LazyLoad from 'react-lazy-load';
 
 const HomeBannar = () => {
     return (
         <div className=''>
-            <div className='w-[76%] mx-auto my-5 set-bg rounded-md'>
+            <div className='md:w-[76%] px-5 md:px-0 mx-auto md:my-5 set-bg rounded-md'>
                 <div className='md:w-[50%] py-32 px-10'>
                     <h1 className=' text-2xl md:text-3xl font-semibold'>Unlock the secrets of flavor with
                         <br /> <span className='md:text-6xl text-4xl font-bold text-yellow-600'> Cuisine Chemistry.</span></h1>

@@ -5,6 +5,7 @@ import '@smastrom/react-rating/style.css'
 import { Rating } from '@smastrom/react-rating';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import LazyLoad from 'react-lazy-load';
 const DisplayRecipeData = ({ recipe }) => {
     const [disableButton,setDisableButton]=useState(false)
     const handelFavoriteRecipe=()=>{

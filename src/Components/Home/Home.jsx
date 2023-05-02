@@ -14,7 +14,7 @@ const Home = () => {
     return (
         <div className=''>
             <HomeBannar></HomeBannar> 
-            <ChefsData chefsData={chefsData}></ChefsData>
+            <LazyLoad><ChefsData chefsData={chefsData}></ChefsData></LazyLoad> 
             <FoodData></FoodData>
             <Carusole></Carusole>
 

@@ -4,6 +4,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import ChefDatailsBannar from '../../pages/ChefDatailsBannar/ChefDatailsBannar';
 import Recipe from '../../pages/Recipe/Recipe';
+import LazyLoad from 'react-lazy-load';
 
 
 const ChefDetails = () => {
@@ -20,7 +21,10 @@ const ChefDetails = () => {
     return (
         <div>
             <ChefDatailsBannar chefData={chefData} ></ChefDatailsBannar>
-            <Recipe recipeData={recipeData}></Recipe>
+            <div className='h-20 md:h-0'>
+
+            </div>
+            <LazyLoad><Recipe recipeData={recipeData}></Recipe></LazyLoad> 
         </div>
     );
 };

@@ -7,9 +7,9 @@ import DisplayRecipeData from '../DisplayRecipeData/DisplayRecipeData';
 const Recipe = ({ recipeData }) => {
     console.log(recipeData);
     return (
-        <div>
-            <h1 className='text-center text-4xl font-bold'>Chef's recipes</h1>
-            <div className='md:w-[50%] mx-auto px-7'>
+        <div className='my-52 md:my-0'>
+            <h1 className='text-center text-4xl font-bold border-b-2 pb-5'>Chef's recipes</h1>
+            <div className='md:w-[50%] mx-auto px-7 my-5'>
                 {
                     recipeData && recipeData.map(recipe => <DisplayRecipeData key={recipe.id} recipe={recipe}></DisplayRecipeData>)
                 }
