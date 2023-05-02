@@ -43,11 +43,13 @@ const router = createBrowserRouter([
     },
     {
         path:"/login",
-        element:<Login></Login>
+        element:<Login></Login>,
+        errorElement: <Errorpage></Errorpage>,
     },
     {
         path:"/registar",
-        element:<Registar></Registar>
+        element:<Registar></Registar>,
+        errorElement: <Errorpage></Errorpage>,
     }
 ]);
 export default router

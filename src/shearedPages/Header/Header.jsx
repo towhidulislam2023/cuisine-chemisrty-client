@@ -84,11 +84,19 @@ const Header = () => {
             {isOpen && (
                 <div className="sm:hidden">
                     <div className="px-2 pt-2 pb-3 space-y-1">
-                        <div className="avatar ml-4">
-                            <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                                <img src={user ? user.photoURL : "https://www.blexar.com/avatar.png"} />
-                            </div>
-                        </div>
+                        {
+                            user ? <a
+                                data-tooltip-id="my-tooltip"
+                                data-tooltip-content={user ? user.displayName : "No Name"}
+                                data-tooltip-place="bottom"
+                            >
+                                <div className="avatar ml-4">
+                                    <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                                        <img src={user ? user.photoURL : "https://www.blexar.com/avatar.png"} />
+                                    </div>
+                                </div>
+                            </a> : <Link to={"/login"}> <button className='btn btn-warning py-0 px-9'>Login</button></Link>
+                        }
                         <div>
                             {
                                 user &&<button onClick={handellogOut} className='btn btn-warning py-0 px-9 ml-0 my-5 '>Logout</button>
