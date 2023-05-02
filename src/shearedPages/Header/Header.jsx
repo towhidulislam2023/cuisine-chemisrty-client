@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext } from 'react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import 'react-tooltip/dist/react-tooltip.css'
 import { Tooltip } from 'react-tooltip'
@@ -26,54 +26,50 @@ const Header = () => {
                             <h1 className='text-3xl font-bold font-mono'>Cuisine Chemistry</h1>
                         </Link>
                     </div>
-                    <div className="flex items-center">
-                        <div className="flex sm:hidden">
-                            <button
-                                type="button"
-                                onClick={toggleMenu}
-                                className="inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                
+                        <div className="flex items-center">
+                            <NavLink
+                                exact
+                                to="/"
+                            className={({ isActive }) =>
+                                isActive ? "px-3 py-2 rounded-md text-sm font-medium text-white  underline" : "px-3 py-2 rounded-md text-sm font-medium text-white"}
                             >
-                                {isOpen ? (
-                                    <FaTimes className="h-6 w-6" />
-                                ) : (
-                                    <FaBars className="h-6 w-6" />
-                                )}
-                            </button>
-                        </div>
-                        <div className="hidden sm:block">
-                            <div className="flex items-center">
-                                <Link
-                                    to="/"
-                                    className="px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-gray-700"
+                                Home
+                            </NavLink>
+                            <NavLink
+                                to="/blog"
+                            className={({ isActive }) =>
+                                isActive ? "underline" : "px-3 py-2 rounded-md text-sm font-medium text-white"
+                            }
+                            >
+                                Blog
+                            </NavLink>
+                            {user ? (
+                                <a
+                                    data-tooltip-id="my-tooltip"
+                                    data-tooltip-content={user.displayName || "No Name"}
+                                    data-tooltip-place="bottom"
                                 >
-                                    Home
-                                </Link>
-                                <Link
-                                    to="/"
-                                    className="px-3 py-2 rounded-md text-sm font-medium text-white hover:bg-gray-700"
-                                >
-                                    Blog
-                                </Link>
-                                {
-                                    user ? <a
-                                        data-tooltip-id="my-tooltip"
-                                        data-tooltip-content={user ? user.displayName : "No Name"}
-                                        data-tooltip-place="bottom"
-                                    >
-                                        <div className="avatar ml-4">
-                                            <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                                                <img src={user ? user.photoURL : "https://www.blexar.com/avatar.png"} />
-                                            </div>
+                                    <div className="avatar ml-4">
+                                        <div className="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                                            <img src={user.photoURL || "https://www.blexar.com/avatar.png"} />
                                         </div>
-                                    </a> : <Link to={"/login"}> <button className='btn btn-warning py-0 px-9'>Login</button></Link>
-                                }
-                                {
-                                    user && <Link className='ml-5'> <button onClick={handellogOut} className='btn btn-warning py-0 px-9 '>Logout</button></Link>
-                                }
-                                
-                            </div>
+                                    </div>
+                                </a>
+                            ) : (
+                                <Link to={"/login"}>
+                                    <button className="btn btn-warning py-0 px-9">Login</button>
+                                </Link>
+                            )}
+                            {user && (
+                                <Link className="ml-5">
+                                    <button onClick={handellogOut} className="btn btn-warning py-0 px-9 ">
+                                        Logout
+                                    </button>
+                                </Link>
+                            )}
                         </div>
-                    </div>
+                
                 </div>
                 <Tooltip id="my-tooltip" />
             </div>

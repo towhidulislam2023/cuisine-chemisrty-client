@@ -8,6 +8,7 @@ import Errorpage from "../Components/ErrorPage/Errorpage";
 import Login from "../Layouts/LoginLayout/Login";
 import Registar from "../Layouts/RegistarLayout/Registar";
 import PrivateRoute from "./PrivateRoute";
+import Blog from "../Components/Blog/Blog";
 
 
 
@@ -21,7 +22,11 @@ const router = createBrowserRouter([
                 path:"/",
                 element: <Home></Home>,
                 loader: () => fetch("https://cuisine-chemistry-server-towhidulislam2023.vercel.app/chefs")
-            }
+            },
+            {
+                path:"/blog",
+                element:<Blog></Blog>,
+            },
         ]
     },
     {
