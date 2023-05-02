@@ -3,6 +3,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import DisplayRecipeData from '../DisplayRecipeData/DisplayRecipeData';
+import { ScrollRestoration } from 'react-router-dom';
 
 const Recipe = ({ recipeData }) => {
     console.log(recipeData);
@@ -14,6 +15,7 @@ const Recipe = ({ recipeData }) => {
                     recipeData && recipeData.map(recipe => <DisplayRecipeData key={recipe.id} recipe={recipe}></DisplayRecipeData>)
                 }
             </div>
+            <ScrollRestoration />
         </div>
     );
 };

@@ -2,6 +2,7 @@
 /* eslint-disable react/jsx-no-undef */
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import { ScrollRestoration } from 'react-router-dom';
 import Pdf from "react-to-pdf";
 const ref = React.createRef();
 const Blog = () => {
@@ -136,6 +137,7 @@ const Blog = () => {
                 <Pdf targetRef={ref} filename="blog-question.pdf">
                     {({ toPdf }) => <button className='btn btn-warning block mx-auto my-6' onClick={toPdf}>Generate Pdf</button>}
                 </Pdf>
+                <ScrollRestoration />
             </div>
         </>
 

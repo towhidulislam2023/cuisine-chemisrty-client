@@ -6,6 +6,7 @@ import { Rating } from '@smastrom/react-rating';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import LazyLoad from 'react-lazy-load';
+import { ScrollRestoration } from 'react-router-dom';
 const DisplayRecipeData = ({ recipe }) => {
     const [disableButton,setDisableButton]=useState(false)
     const handelFavoriteRecipe=()=>{
@@ -33,6 +34,7 @@ const DisplayRecipeData = ({ recipe }) => {
                 </div>
             </div>
             <ToastContainer />
+            <ScrollRestoration />
         </div>
     );
 };

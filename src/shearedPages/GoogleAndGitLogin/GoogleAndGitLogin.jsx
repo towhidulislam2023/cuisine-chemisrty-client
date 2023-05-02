@@ -31,7 +31,7 @@ const GoogleAndGitLogin = () => {
             })
     }
     return (
-        <div className='w-[25%] mx-auto'>
+        <div className='md:w-[25%] mx-auto px-6 md:px-0'>
             <>
                 <hr className='border my-5 border-gray-400  mx-auto' />
                 <button onClick={handelLoginByGoogle} className='btn flex w-[100%] mx-auto bg-transparent mt-5 text-black hover:bg-transparent'>
