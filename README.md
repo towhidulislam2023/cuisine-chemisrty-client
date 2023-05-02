@@ -44,9 +44,9 @@ We welcome contributions from anyone who is passionate about healthy and delicio
 
 ## Links
 
-Client Site Live Link: https://cuisine-chemistry.web.app/
-Server Site Live Link DOMAINS : https://cuisine-chemistry-server.vercel.app/
-Server Site Live Link DEPLOYMENT: https://cuisine-chemistry-server-towhidulislam2023.vercel.app/
+* Client Site Live Link: https://cuisine-chemistry.web.app/
+* Server Site Live Link DOMAINS : https://cuisine-chemistry-server.vercel.app/
+* Server Site Live Link DEPLOYMENT: https://cuisine-chemistry-server-towhidulislam2023.vercel.app/
 
 ## License
 
