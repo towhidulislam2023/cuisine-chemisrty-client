@@ -7,6 +7,7 @@ import GoogleAndGitLogin from '../../shearedPages/GoogleAndGitLogin/GoogleAndGit
 const Login = () => {
     return (
         <div>
+            {/* loginlayout  */}
             <Header></Header>
             <EmailPAssword></EmailPAssword>
             <GoogleAndGitLogin></GoogleAndGitLogin>

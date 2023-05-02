@@ -5,6 +5,7 @@ import LazyLoad from 'react-lazy-load';
 import { Link } from 'react-router-dom';
 
 const HomeBannar = () => {
+    // use in home components
     return (
         <div className=''>
             <div className='md:w-[76%] px-5 md:px-0 mx-auto md:my-5 set-bg rounded-md'>

@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 
 const FoodData = () => {
+    // use in home components
     const [foodData,setFoodData]=useState([])
     useEffect(()=>{
         fetch("https://cuisine-chemistry-server-towhidulislam2023.vercel.app/food")

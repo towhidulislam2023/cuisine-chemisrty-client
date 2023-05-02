@@ -6,6 +6,7 @@ import DisplayRecipeData from '../DisplayRecipeData/DisplayRecipeData';
 import { ScrollRestoration } from 'react-router-dom';
 
 const Recipe = ({ recipeData }) => {
+    // only use in secondary layout chefsDatials
     console.log(recipeData);
     return (
         <div className='my-52 md:my-0'>

@@ -9,6 +9,7 @@ import "swiper/css/navigation";
 // import required modules
 import { Navigation } from "swiper";
 const Carusole = () => {
+    // it use in home components 
     return (
         <div className='md:w-[75%] h-96 mb-20 md:h-[70vh] mx-auto px-5 md:my-28'>
             <h1 className='text-4xl font-bold text-center my-6'>Food we serve</h1>

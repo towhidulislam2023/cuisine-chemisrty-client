@@ -5,6 +5,7 @@ import { FaThumbsUp } from 'react-icons/fa';
 import LazyLoad from 'react-lazy-load';
 
 const ChefDatailsBannar = ({ chefData }) => {
+    // it use in home components 
     console.log(chefData);
     return (
        <LazyLoad height={400} >

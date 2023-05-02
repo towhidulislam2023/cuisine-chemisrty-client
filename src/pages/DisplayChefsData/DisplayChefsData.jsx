@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 
 
 const DisplayChefsData = ({ chefdata }) => {
+    // use in Home Components 
     return (
        
         <div className="card md:w-[24rem] bg-base-100 shadow-xl">

@@ -8,6 +8,7 @@ const PrimaryLayout = () => {
     const navigation=useNavigate()
     return (
         <div>
+            {/* primaryLAyout  */}
             <Header></Header>
             {
                 navigation.state === "loading" ? <div className='flex justify-center items-center h-screen'><progress className="progress w-56 "></progress></div> : <Outlet></Outlet>

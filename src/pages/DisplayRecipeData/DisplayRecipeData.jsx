@@ -8,11 +8,13 @@ import 'react-toastify/dist/ReactToastify.css';
 import LazyLoad from 'react-lazy-load';
 import { ScrollRestoration } from 'react-router-dom';
 const DisplayRecipeData = ({ recipe }) => {
+    // use in recipe Components 
     const [disableButton,setDisableButton]=useState(false)
     const handelFavoriteRecipe=()=>{
         toast("You have added this recipe to Your favorites")
         setDisableButton(true)
     }
+
     return (
         <div className="card  bg-base-100 shadow-xl my-11">
             <div className="card-body">

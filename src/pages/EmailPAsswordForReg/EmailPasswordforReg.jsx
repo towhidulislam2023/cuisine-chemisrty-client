@@ -6,6 +6,7 @@ import { AuthProviderContext } from '../../Provider/AuthProvider/AuthProvider';
 import { FaExclamation } from 'react-icons/fa';
 
 const EmailPasswordforReg = () => {
+    // use in registar layout 
     const [error, setError] = useState("")
     const { user, updateUserProfile, CreateNewUserWithEmailAndPassword } = useContext(AuthProviderContext)
     const navigate = useNavigate()

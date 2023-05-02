@@ -10,6 +10,7 @@ const SecondaryLayout = () => {
     return (
         <div className=''>
             <Header></Header>
+            {/* secondary layout  */}
             {
                 navigation.state === "loading" ? <div className='flex justify-center items-center h-screen'><progress className="progress w-56 "></progress>
                 </div> : <Outlet></Outlet>

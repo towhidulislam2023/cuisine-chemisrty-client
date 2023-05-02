@@ -5,6 +5,7 @@ import { AuthProviderContext } from '../../Provider/AuthProvider/AuthProvider';
 import { FaExclamation } from 'react-icons/fa';
 
 const EmailPAssword = () => {
+    // use in login layout 
     const [error, setError] = useState("")
     const { loginUser }=useContext(AuthProviderContext)
     const navigate = useNavigate()
