@@ -7,6 +7,7 @@ import ChefDetails from "../Components/ChefDetails/ChefDetails";
 import Errorpage from "../Components/ErrorPage/Errorpage";
 import Login from "../Layouts/LoginLayout/Login";
 import Registar from "../Layouts/RegistarLayout/Registar";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -25,12 +26,12 @@ const router = createBrowserRouter([
     },
     {
         path:'/recipe',
-        element:<SecondaryLayout></SecondaryLayout>,
+        element: <PrivateRoute><SecondaryLayout></SecondaryLayout></PrivateRoute>,
         errorElement: <Errorpage></Errorpage>,
         children:[
             {
                 path: '/recipe/:id',
-                element: <ChefDetails></ChefDetails>,
+                element:<ChefDetails></ChefDetails> ,
                 loader: ({params}) => fetch(`https://cuisine-chemistry-server-towhidulislam2023.vercel.app/recipe/${params.id}`)
             }
         ]

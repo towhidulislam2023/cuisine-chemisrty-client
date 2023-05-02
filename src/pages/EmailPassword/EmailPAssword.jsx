@@ -1,12 +1,15 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthProviderContext } from '../../Provider/AuthProvider/AuthProvider';
 import { FaExclamation } from 'react-icons/fa';
 
 const EmailPAssword = () => {
     const [error, setError] = useState("")
     const { loginUser }=useContext(AuthProviderContext)
+    const navigate = useNavigate()
+    const location = useLocation()
+    const from = location.state?.from?.pathname || "/" 
     const handelLogin = (event) => {
         event.preventDefault()
         const form = event.target
@@ -14,6 +17,7 @@ const EmailPAssword = () => {
         const passsword = form.password.value
         loginUser(email,passsword)
         .then(result=>{
+            navigate(from, { replace: true })
             setError("")
             console.log(result.user);
 

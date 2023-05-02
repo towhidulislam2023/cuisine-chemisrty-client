@@ -8,13 +8,13 @@ import { useLocation, useNavigate } from 'react-router-dom';
 const GoogleAndGitLogin = () => {
     const navigate = useNavigate()
     const location = useLocation()
-    const from = location.state?.pathname || "/"
+    const from = location.state?.from?.pathname ||"/" 
     const { handelGoogleLogin, handelGithubLogin } = useContext(AuthProviderContext)
     const handelLoginByGoogle = () => {
         handelGoogleLogin()
             .then(result => {
                 console.log(result.user);
-                // navigate(from, { replace: true })
+                navigate(from, { replace: true })
             })
             .catch(error => {
                 console.log(error);
@@ -24,7 +24,7 @@ const GoogleAndGitLogin = () => {
         handelGithubLogin()
             .then(result => {
                 console.log(result.user);
-                // navigate(from, { replace: true })
+                navigate(from, { replace: true })
             })
             .catch(error => {
                 console.log(error);

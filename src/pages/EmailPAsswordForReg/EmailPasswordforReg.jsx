@@ -1,13 +1,16 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthProviderContext } from '../../Provider/AuthProvider/AuthProvider';
 import { FaExclamation } from 'react-icons/fa';
 
 const EmailPasswordforReg = () => {
     const [error, setError] = useState("")
     const { user, updateUserProfile, CreateNewUserWithEmailAndPassword } = useContext(AuthProviderContext)
+    const navigate = useNavigate()
+    const location = useLocation()
+    const from = location.state?.from?.pathname || "/" 
     const handelRegistar = (event) => {
         event.preventDefault()
         const form = event.target
@@ -26,6 +29,7 @@ const EmailPasswordforReg = () => {
                 updateUserProfile(name,photoUrl)
                 setError('')
                 console.log(result.user);
+                navigate(from, { replace: true })
             })
             .catch(error => {
                 setError(error.message)
