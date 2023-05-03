@@ -20,7 +20,6 @@ const EmailPAssword = () => {
         .then(result=>{
             navigate(from, { replace: true })
             setError("")
-            console.log(result.user);
 
         })
         .catch(error=>{

@@ -16,7 +16,7 @@ const FoodData = () => {
                 <p className='pb-7 px-3'>American cuisine was influenced by Europeans and Native Americans in its early history.</p>
                 <div className='grid md:grid-cols-6 gap-6 px-3'>
                     {
-                        foodData && foodData.map(food => <div key={food.id} className="card w bg-base-100 shadow-xl image-full z-0">
+                        foodData && foodData.map(food => <div key={food.food_id} className="card w bg-base-100 shadow-xl image-full z-0">
                             <figure><img  src={food.food_image} alt="" /></figure>
                             <div className="card-body px-4 ">
                                 <h2 className="card-title">{food.food_name}</h2>

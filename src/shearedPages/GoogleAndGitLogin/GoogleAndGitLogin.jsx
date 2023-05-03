@@ -13,7 +13,6 @@ const GoogleAndGitLogin = () => {
     const handelLoginByGoogle = () => {
         handelGoogleLogin()
             .then(result => {
-                console.log(result.user);
                 navigate(from, { replace: true })
             })
             .catch(error => {
@@ -23,7 +22,6 @@ const GoogleAndGitLogin = () => {
     const handelLoginByGit = () => {
         handelGithubLogin()
             .then(result => {
-                console.log(result.user);
                 navigate(from, { replace: true })
             })
             .catch(error => {

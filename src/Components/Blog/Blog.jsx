@@ -13,7 +13,7 @@ const Blog = () => {
                 <div ref={ref} className='w-[100%] '>
                     <div>
                         <div>
-                            <div className="w-[75%]  px-7 md:p-0 mx-auto ">
+                            <div className="md:w-[75%]  px-7 md:p-0 mx-auto ">
                                 <div className="my-5">
                                     <h1 className='text-3xl font-bold '>1. Tell us the differences between uncontrolled and controlled components.</h1>
                                     <p className="text-lg">

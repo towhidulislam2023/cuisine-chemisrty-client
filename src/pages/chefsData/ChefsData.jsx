@@ -4,7 +4,6 @@ import React from 'react';
 import DisplayChefsData from '../DisplayChefsData/DisplayChefsData';
 
 const ChefsData = ({ chefsData }) => {
-    console.log(chefsData);
     // it use home components 
     return (
         <div className='md:w-[75%] my-16 mx-auto'>
@@ -19,7 +18,6 @@ const ChefsData = ({ chefsData }) => {
                     chefsData && chefsData.map(chef => <DisplayChefsData key={chef.id} chefdata={chef} ></DisplayChefsData>)
                 }
             </div>
-
         </div>
     );
 };

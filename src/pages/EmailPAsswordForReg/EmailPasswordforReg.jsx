@@ -29,7 +29,6 @@ const EmailPasswordforReg = () => {
             .then(result => {
                 updateUserProfile(name,photoUrl)
                 setError('')
-                console.log(result.user);
                 navigate(from, { replace: true })
             })
             .catch(error => {
