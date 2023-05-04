@@ -38,7 +38,7 @@ const EmailPasswordforReg = () => {
         form.reset()
     }
     return (
-        <div className='md:w-[30%] mx-auto px-5'>
+        <div className='my-12 md:w-[30%] mx-auto px-5'>
             <div className='border border-black px-9 py-2 rounded-md border-opacity-60'>
                 <h5 className='text-2xl mt-2 font-bold'>Registar </h5>
                 <div className="errorShowSection mt-5 flex items-center">
