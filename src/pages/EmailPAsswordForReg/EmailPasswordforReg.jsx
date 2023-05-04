@@ -38,7 +38,7 @@ const EmailPasswordforReg = () => {
         form.reset()
     }
     return (
-        <div className='my-10  md:w-[30%] mx-auto px-5'>
+        <div className='md:w-[30%] mx-auto px-5'>
             <div className='border border-black px-9 py-2 rounded-md border-opacity-60'>
                 <h5 className='text-2xl mt-2 font-bold'>Registar </h5>
                 <div className="errorShowSection mt-5 flex items-center">
@@ -69,6 +69,8 @@ const EmailPasswordforReg = () => {
                     </button>
                     <p className='text-center my-4'>Alrady have an account ? <Link className='underline text-yellow-600 ' to={'/login'}>Please Login</Link> </p>
                 </form>
+            </div>
+            <div className='h-10 '>
             </div>
         </div>
     );

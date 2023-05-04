@@ -9,7 +9,7 @@ const Registar = () => {
         <div>
          <Header></Header>
          <EmailPasswordforReg></EmailPasswordforReg>
-         <GoogleAndGitLogin></GoogleAndGitLogin>
+         {/* <GoogleAndGitLogin></GoogleAndGitLogin> */}
         </div>
     );
 };
