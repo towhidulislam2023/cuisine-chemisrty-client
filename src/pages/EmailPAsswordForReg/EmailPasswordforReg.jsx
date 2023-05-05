@@ -21,10 +21,23 @@ const EmailPasswordforReg = () => {
         const ConfirmPasssword = form.ConfirmPassword.value
         const photoUrl = form.photoUrl.value
         console.log(photoUrl);
-        if (passsword !== ConfirmPasssword) {
+        if (email === ""){
+            setError('A user cannot submit empty email fields')
+            return
+        }
+        else if (passsword === "") {
+            setError('A user cannot submit empty password fields')
+            return
+        }
+        else if (passsword !== ConfirmPasssword) {
             setError('Password not match')
             return 
         }
+        else if (passsword.length < 6) {
+            setError('The password is less than 6 characters')
+            return
+        }
+
         CreateNewUserWithEmailAndPassword(email, passsword)
             .then(result => {
                 updateUserProfile(name,photoUrl)
@@ -51,7 +64,7 @@ const EmailPasswordforReg = () => {
                 <form onSubmit={handelRegistar} className='my-12'>
                     <input className='border-l-none border-b-2 border-black border-opacity-5 py-3 outline-none w-full text-black' type="name" required name='name' placeholder='Your Name' />
 
-                    <input className='border-l-none border-b-2 mt-10 border-black border-opacity-5 py-3 outline-none w-full text-black' type="email" required name='email' placeholder='Username or Email' />
+                    <input className='border-l-none border-b-2 mt-10 border-black border-opacity-5 py-3 outline-none w-full text-black' type="email"   required name='email' placeholder='Username or Email' />
 
                     <input className='border-l-none border-b-2 mt-10 border-black border-opacity-5 py-3 outline-none w-full text-black' type="text" name='photoUrl' required placeholder='PhotoURL' />
 

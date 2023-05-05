@@ -85,7 +85,7 @@ const Blog = () => {
                                     <p className="text-lg">
                                         <span className="text-red-700 font-semibold text-lg">Ans:</span>
                                         <br />
-                                        <span className="bg-green-100 text-black p-1">useRef</span>:
+                                        <span className="bg-green-100 text-black p-1"></span>:
                                         <div className="overflow-x-auto">
                                             <table className="table w-full my-5 z-0">
                                                 {/* head */}
