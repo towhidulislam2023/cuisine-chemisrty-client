@@ -17,7 +17,6 @@ const Home = () => {
             <LazyLoad><ChefsData chefsData={chefsData}></ChefsData></LazyLoad> 
             <FoodData></FoodData>
             <Carusole></Carusole>
-
         </div>
     );
 };
