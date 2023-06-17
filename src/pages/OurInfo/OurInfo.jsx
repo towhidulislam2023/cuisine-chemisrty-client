@@ -6,7 +6,7 @@ import "./ourinfo.css"
 const OurInfo = () => {
     return (
         <div className="md:w-[75%] mx-auto ">
-            <div className="infoSetvg flex  md:h-[50vh] ">
+            <div className="infoSetvg flex  md:h-[80vh] ">
                 <div className="px-4 py-14 md:flex items-center gap-10 bg-white bg-opacity-5">
                     <div className="md:w-[50%]">
                         <h1 className=" text-white"> <span className="font-extralight text-xl text-yellow-500">Discover</span> <br /> <hr /><span className="font-extrabold text-4xl">Our Awesome Food </span> </h1>
