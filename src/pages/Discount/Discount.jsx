@@ -7,7 +7,7 @@ import img6 from '../../assets/6.png';
 const Discount = () => {
     return (
         <div className="md:w-[75%] mx-auto my-10">
-            
+
             <section className="overflow-hidden bg-gray-50 sm:grid sm:grid-cols-2 items-center">
                 <div className="p-8 md:p-12 lg:px-16 lg:py-24">
                     <div
@@ -33,26 +33,29 @@ const Discount = () => {
                         </div>
                     </div>
                 </div>
-                <div className="h-96 carousel carousel-vertical rounded-box mx-auto">
-                    <div className="carousel-item h-full">
-                        <img src={img1}/>
-                    </div>
-                    <div className="carousel-item h-full">
-                        <img src={img2} />
-                    </div>
-                    <div className="carousel-item h-full">
-                        <img src={img3} />
-                    </div>
-                    <div className="carousel-item h-full">
-                        <img src={img4} />
-                    </div>
-                    <div className="carousel-item h-full">
-                        <img src={img5} />
-                    </div>
-                    <div className="carousel-item h-full">
-                        <img src={img6} />
+                <div>
+                    <div className="h-96  carousel carousel-vertical  mx-auto">
+                        <div className="carousel-item h-full">
+                            <img className='mx-auto' src={img1} />
+                        </div>
+                        <div className="carousel-item h-full">
+                            <img className='mx-auto' src={img2} />
+                        </div>
+                        <div className="carousel-item h-full">
+                            <img className='mx-auto'  src={img3} />
+                        </div>
+                        <div  className="carousel-item h-full">
+                            <img className='mx-auto' src={img4} />
+                        </div>
+                        <div className="carousel-item h-full">
+                            <img className='mx-auto' src={img5} />
+                        </div>
+                        <div className="carousel-item h-full">
+                            <img className='mx-auto'  src={img6} />
+                        </div>
                     </div>
                 </div>
+
             </section>
         </div>
     );

@@ -1,9 +1,14 @@
-.infoSetvg{
-    
-    background:url(../../assets/vegetables-set-left-black-slate_1220-685.png);
+
+.infoSetvg {
+    background: url(../../assets/vegetables-set-left-black-slate_1220-685.png);
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
+}
 
+@media (max-width: 768px) {
+    .infoSetvg {
+        clip-path: none;
+    }
 }

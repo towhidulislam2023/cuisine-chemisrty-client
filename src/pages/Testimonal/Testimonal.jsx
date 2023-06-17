@@ -9,7 +9,7 @@ const Testimonal = () => {
                 <p className='w-[70%] mx-auto'>
                     An enim nullam tempor sapien gravida donec enim ipsum porta justo congue purus pretium ligula</p>
             </div>
-        <div className=" grid grid-cols-3 mb-10">
+        <div className=" grid md:grid-cols-3 space-y-4 md:space-y-0 mb-10">
             <div className="lg:w-96 mx-auto border bg-base-100 " style={{ maxWidth: "80vw" }}>
                 <figure className="px-10 pt-10">
                     <img

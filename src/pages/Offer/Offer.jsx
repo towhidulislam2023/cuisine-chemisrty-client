@@ -2,7 +2,7 @@
 
 const Offer = () => {
     return (
-        <div className="md:w-[75%] mx-auto my-10">
+        <div className="md:w-[75%] md:mx-auto my-10 mx-6 ">
             <section className="overflow-hidden rounded-lg shadow-2xl md:grid md:grid-cols-3 items-center">
                 <img
                     alt="Trainer"
